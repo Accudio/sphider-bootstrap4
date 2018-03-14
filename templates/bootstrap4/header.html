@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<title><?php if($query != ''){ print quote_replace($query); echo ' - '; }?>Search Results</TITLE>
+	<link type="text/css" rel="stylesheet" href="templates/bootstrap4/bootstrap.min.css">
+	<link type="text/css" rel="stylesheet" href="templates/bootstrap4/search.css">
+	<!-- suggest script -->
+	<style type="text/css">@import url("include/js_suggest/SuggestFramework.css");</style>
+	<script type="text/javascript" src="include/js_suggest/SuggestFramework.js"></script>
+	<script type="text/javascript">window.onload = initializeSuggestFramework;</script>
+	<!-- /suggest script -->
+</head>
+
+<body>
+	<div class="container">
+		<section id="header">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center">
+					<h1>Search</h1>

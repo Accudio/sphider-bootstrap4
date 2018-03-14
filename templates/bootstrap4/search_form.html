@@ -1,0 +1,64 @@
+					<?php
+						if (!isset($query))
+							$query = "";
+						if (!isset($adv))
+							$adv = 0;
+					?>
+
+					<form method="post">
+
+						<div class="input-group mb-3">
+							<input type="text" class="form-control" placeholder="Search for..." aria-label="Search for" name="query" id="query" size="40" value="<?php print quote_replace($query);?>" action="include/js_suggest/suggest.php" autocomplete="off" delay="1500">
+							<div class="input-group-append">
+								<button class="btn btn-primary" type="submit" value="<?php print $sph_messages['Search']?>">Search</button>
+							</div>
+						</div>
+
+						<?php  if ($adv==1 || $advanced_search==1) {
+						?>
+							<div class="row text-left" id="advancedsearch">
+								<div class="col-md-6">
+									<div class="custom-control custom-radio">
+										<input id="radio1" name="type" value="and" type="radio" class="custom-control-input" <?php print $type=='and'?'checked':''?>>
+									  <label class="custom-control-label" for="radio1"><?php print $sph_messages['andSearch']?></label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="custom-control custom-radio">
+										<input id="radio2" name="type" value="or" type="radio" class="custom-control-input" <?php print $_REQUEST['type']=='or'?'checked':''?>>
+									  <label class="custom-control-label" for="radio2"><?php print $sph_messages['orSearch']?></label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="custom-control custom-radio">
+										<input id="radio3" name="type" value="phrase" type="radio" class="custom-control-input" <?php print $_REQUEST['type']=='phrase'?'checked':''?>>
+									  <label class="custom-control-label" for="radio3"><?php print $sph_messages['phraseSearch']?></label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<select name="results" class="custom-select form-control-sm num-results">
+										<option <?php  if ($results_per_page==10) echo "selected";?>>10</option>
+										<option <?php  if ($results_per_page==20) echo "selected";?>>20</option>
+										<option <?php  if ($results_per_page==50) echo "selected";?>>50</option>
+										<option <?php  if ($results_per_page==100) echo "selected";?>>100</option>
+									</select>
+									<?php print $sph_messages['resultsPerPage']?>
+								</div>
+							</div>
+						<?php }?>
+
+						<?php if ($catid<>0){?>
+							<center><b><?php print $sph_messages['Search']?></b>: <input type="radio" name="category" value="<?php print $catid?>"><?php print $sph_messages['Only in category']?> "<?php print $tpl_['category'][0]['category']?>'" <input type="radio" name="category" value="-1" checked><?php print $sph_messages['All sites']?></center>
+						<?php  }?>
+
+						<input type="hidden" name="search" value="1">
+
+					</form>
+
+					<?php if ($has_categories && $search==1 && $show_categories){?>
+						<a href="search.php"><?php print $sph_messages['Categories']?></a>
+					<?php  }?>
+
+				</div>
+			</div>
+		</section>
