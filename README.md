@@ -12,11 +12,8 @@ All required is a working installation of [Sphider][sphiderdown] or one of it's 
 
 ## Installation
 
-1. Download the theme zip in the root Sphider directory:
-	
-    ```wget https://github.com/accudio/sphider-bootstrap4/archive/master.zip```.
-
-2. Extract the zip: ```unzip master.zip```.
+1. Download the latest release zip file: ```wget https://github.com/Accudio/sphider-bootstrap4/releases/download/v1.0.0/sphider-bootstrap4-v1.0.0.zip```
+2. Extract the zip in the root Sphider directory: ```unzip sphider-bootstrap4-v1.0.0.zip```.
 3. Ensure ```templates/``` includes the folder ```bootstrap4```.
 4. Log in to Sphider administration page:
 	1. Go to 'Settings';
@@ -26,7 +23,7 @@ All required is a working installation of [Sphider][sphiderdown] or one of it's 
 
 ## Version History
 
-- v1.0.0&mdash;Initial public release
+- v1.0.0 - Initial public release
 
 ## License
 
