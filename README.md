@@ -3,10 +3,6 @@
 
 A theme based on [Bootstrap 4][bootstrapurl] for the [Sphider][sphiderurl] PHP search engine and spider, a useful PHP-based spider and search interface with many advanced features, that simply lacks a modern interface. The theme features a minimal, responsive interface designed for use with modern sites and devices.
 
-## Demo
-
-You can see a demo of the theme at [accudio.com/sitesearch](https://accudio.com/sitesearch/), which displays results from accudio.com and sphider.eu.
-
 ## Requirements
 
 All required is a working installation of [Sphider][sphiderdown] or one of it's forks. The theme has been tested with Sphider-PDO v1.3.10, but should work on many versions, including of the forks [Sphider Plus][sphiderplus] and [Sphider Pro][sphiderpro].
